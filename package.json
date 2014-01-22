@@ -1,0 +1,49 @@
+{
+  "name": "underscore-more",
+  "version": "1.0.0",
+  "description": "Miscellaneous extensions to underscore and underscore.string.",
+  "homepage": "http://github.com/ahinni/underscore-more",
+  "contributors": [
+    "Aaron Hinni @aaronhinni"
+  ],
+  "keywords": [
+    "underscore",
+    "string",
+    "functional",
+    "extensions"
+  ],
+  "main": "./lib/underscore-more",
+  "directories": {
+    "lib": "./lib"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahinni/underscore-more.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ahinni/underscore-more/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "peerDependencies": {
+    "underscore": "~1.5.2",
+    "underscore.string": "~2.3.3"
+  },
+  "devDependencies": {
+    "underscore": "~1.5.2",
+    "underscore.string": "~2.3.3",
+    "grunt": "~0.4.2",
+    "grunt-cli": "~0.1.12",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "chai": "~1.8.1",
+    "mocha": "~1.17.1",
+    "grunt-exec": "~0.4.3"
+  }
+}
