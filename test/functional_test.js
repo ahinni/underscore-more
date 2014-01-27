@@ -35,24 +35,6 @@ describe('underscore extensions', function () {
     });
   });
 
-  describe('transform', function () {
-    var original = { a: 1, b: 3, c: 5 };
-    function add5(n) { return n+5; }
-    function concatKeyVal(val, key) { return key + val; }
-
-    it('applies a transform function to each value in an object and returns a new object', function () {
-      expect(_.transform(original, add5)).eql({ a: 6, b: 8, c: 10});
-    });
-
-    it('doesnt affect the original object', function () {
-      _.transform(original, add5);
-      expect(original).eql( { a: 1, b: 3, c: 5 });
-    });
-
-    it('passes the key', function () {
-      expect(_.transform(original, concatKeyVal)).eql( { a: 'a1', b: 'b3', c: 'c5' } );
-    });
-  });
 
   describe('partialAny', function () {
     function cat(first, second, third) {
