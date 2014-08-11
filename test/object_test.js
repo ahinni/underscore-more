@@ -63,5 +63,28 @@ describe('underscore extensions', function () {
     });
   });
 
+  describe('hasKey', function () {
+    var object = { aaron: 'hi', nested: { you: 'are there', deeply: { me: 0, her: 1 }}};
+    it('returns true if key exists', function () {
+      expect(_.hasKey(object, 'aaron')).eql(true);
+    });
+
+    it('returns false if key does not exist', function () {
+      expect(_.hasKey(object, 'todd')).eql(false);
+    });
+
+    it('works for nested keys', function () {
+      expect(_.hasKey(object, 'nested.you')).eql(true);
+    });
+
+    it('works for deeply nested keys', function () {
+      expect(_.hasKey(object, 'nested.deeply.me')).eql(true);
+    });
+
+    it('works for deeply nested keys that dont exist', function () {
+      expect(_.hasKey(object, 'nested.deeply.them')).eql(false);
+    });
+  });
+
 });
 
