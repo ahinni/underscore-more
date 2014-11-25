@@ -74,5 +74,16 @@ describe('underscore extensions', function () {
     });
   });
 
+  describe('aritize', function () {
+    function f() {
+      return arguments[arguments.length-1];
+    }
+
+    it('limits the number of arguments a function can take', function () {
+      expect(f('one', 'two', 'three')).eql('three');
+      expect(_.aritize(f, 2)('one', 'two', 'three')).eql('two');
+    });
+  });
+
 });
 
