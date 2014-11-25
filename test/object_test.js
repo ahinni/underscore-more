@@ -85,12 +85,5 @@ describe('underscore extensions', function () {
       expect(_.hasKey(object, 'nested.deeply.them')).eql(false);
     });
   });
-
-  describe('objectify', function () {
-    it("creates an object from array setting each key to value passed in", function () {
-      expect(_.objectify(['admin', 'foo', 'bar'], true)).eql({ admin: true, foo: true, bar: true });
-    });
-  });
-
 });
 
