@@ -39,6 +39,14 @@ describe('underscore array extensions', function () {
       ]);
     });
 
+    it("groups by options and can specify name", function () {
+      expect(_.bucketize(list, { by: 'a', as: 'something', name: 'a'})).eql([
+        { a: 'A1', something: [ { a: 'A1', b: 'B1', c: 'C1' }, { a: 'A1', b: 'B2', c: 'C2' }, { a: 'A1', b: 'B2', c: 'C3' } ]},
+        { a: 'A2', something: [ { a: 'A2', b: 'B1', c: 'C4' }, { a: 'A2', b: 'B1', c: 'C5' } ] },
+        { a: 'A3', something: [ { a: 'A3', b: 'B1', c: 'C6' } ] }
+      ]);
+    });
+
   });
 
   describe('objectify', function () {
