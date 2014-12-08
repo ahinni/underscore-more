@@ -29,6 +29,22 @@ describe('underscore extensions', function () {
     });
   });
 
+  describe('monetize', function () {
+    it('does number formatty stuff', function () {
+      var data = [
+        [1.23, '$1.23'],
+        [1.236, '$1.24'],
+        [-1.23, '-$1.23'],
+        [2, '$2.00'],
+        [-2, '-$2.00']
+      ];
+
+      _.each(data, function (pair) {
+        expect(_.dollarize(pair[0])).eql(pair[1]);
+      });
+    });
+  });
+
   describe('upcase', function () {
     it('converts all chars to uppercase', function () {
       expect(_.upcase('hi there')).eql('HI THERE');
