@@ -32,12 +32,12 @@
     }
   ],
   "peerDependencies": {
-    "underscore": "~1.5.2",
-    "underscore.string": "~2.3.3"
+    "underscore": "~1.7.0",
+    "underscore.string": "~3.0.2"
   },
   "devDependencies": {
-    "underscore": "~1.5.2",
-    "underscore.string": "~2.3.3",
+    "underscore": "~1.7.0",
+    "underscore.string": "~3.0.2",
     "grunt": "~0.4.2",
     "grunt-cli": "~0.1.12",
     "grunt-contrib-jshint": "~0.8.0",
