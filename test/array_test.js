@@ -55,5 +55,35 @@ describe('underscore array extensions', function () {
     });
   });
 
+  describe('chunk', function () {
+    it("Breaks an array into chunks based on chunksize, and leaves leftovers", function () {
+      expect(_.chunk([1,2,3,4,5,6,7,8,9], 4)).eql([[1,2,3,4],[5,6,7,8],[9]]);
+    });
+
+    it("Works for arrays equally divisible by chunk size", function () {
+      expect(_.chunk([1,2,3,4,5,6,7,8,9], 3)).eql([[1,2,3],[4,5,6],[7,8,9]]);
+    });
+
+    it("Works for chunk size of 1", function () {
+      expect(_.chunk([1,2,3,4,5,6,7,8,9], 1)).eql([[1],[2],[3],[4],[5],[6],[7],[8],[9]]);
+    });
+
+    it("Just returns original array if chunk size is 0", function () {
+      expect(_.chunk([1,2,3,4,5,6,7,8,9], 0)).eql([1,2,3,4,5,6,7,8,9]);
+    });
+
+    it("Gives back an array within an array if initial is smaller than chunksize", function () {
+      expect(_.chunk([1,2,3,4,5,6,7,8,9], 10)).eql([[1,2,3,4,5,6,7,8,9]]);
+    });
+
+    it("Gives back an array within an array if initial is same as chunksize", function () {
+      expect(_.chunk([1,2,3,4,5,6,7,8,9], 9)).eql([[1,2,3,4,5,6,7,8,9]]);
+    });
+
+    it("fine with empty array", function () {
+      expect(_.chunk([], 9)).eql([]);
+    });
+  });
+
 });
 
