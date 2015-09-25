@@ -1,6 +1,6 @@
 {
   "name": "underscore-more",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "Miscellaneous extensions to underscore and underscore.string.",
   "homepage": "http://github.com/ahinni/underscore-more",
   "contributors": [
@@ -32,12 +32,12 @@
     }
   ],
   "peerDependencies": {
-    "underscore": "~1.7.0",
-    "underscore.string": "~3.0.2"
+    "underscore": "*",
+    "underscore.string": "*"
   },
   "devDependencies": {
-    "underscore": "~1.7.0",
-    "underscore.string": "~3.0.2",
+    "underscore": "*",
+    "underscore.string": "*",
     "grunt": "~0.4.2",
     "grunt-cli": "~0.1.12",
     "grunt-contrib-jshint": "~0.8.0",
